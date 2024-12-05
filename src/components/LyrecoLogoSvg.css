@@ -1,0 +1,20 @@
+/* LyrecoLogo.css */
+
+.lyreco-logo {
+  width: 200px;
+  height: 200px;
+}
+
+.lyreco-path {
+  animation: draw 3s ease-in-out forwards infinite alternate;
+  /* animation-delay: 15s;*/
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 5000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

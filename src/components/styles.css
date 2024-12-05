@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.logo-container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo-container.clicked {
+  animation: popOutEffect 1.5s ease-in-out forwards;
+}
+
+/* Style for the logo image */
+.logo {
+  width: 170px;
+  height: 170px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-container:hover .logo {
+  transform: rotate(10deg);
+}
+
+/* Style for ASCII art */
+.ascii-art {
+  font-family: monospace;
+  font-size: 6px;
+  color: #555;
+  text-align: center;
+}
+
+/* Style for the text */
+.stylized-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0077b6;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Pop-out effect with fade-out */
+@keyframes popOutEffect {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(-30px, -30px) scale(1.1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.2);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(-30px, 30px) scale(1.3);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(30px, 30px) scale(1.4);
+    opacity: 0;
+  }
+}
